@@ -1,0 +1,15 @@
+"""Run the lessons without installing the package.
+
+    python3 demo.py
+    python3 demo.py align GATTACA GCATGCT --matrix
+"""
+
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
+
+from bioalign.__main__ import main
+
+if __name__ == "__main__":
+    raise SystemExit(main())
